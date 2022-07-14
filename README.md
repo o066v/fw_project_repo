@@ -7,58 +7,49 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Evaluación de unidad 1 - UNI01
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Resultados de Aprendizaje: 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Crean un package en un entorno de desarrollo, utilizando framewoks para un proyecto de software. 
+- Capturan datos de una vista para un proyecto de software 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+De acuerdo a lo anterior, se espera evidenciar que los estudiantes: 
+- Define un estilo visual para las vistas.
+- Define códigos para recibir datos de la vista. 
+- Opera con los datos recibidos de la vista.  
 
-## Learning Laravel
+Tiempo: según la indica en la plataforma 
+Puntaje: 100 puntos.  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Características de la evaluación:  
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Esta es una actividad  calificada de la unidad y es de carácter grupal. 
+- Para conocer cómo serás evaluado, revisa la rúbrica disponible en plataforma. 
+- Esta es una actividad evaluativa de desarrollo extendida donde se debe interpretar el caso de estudio o situación problemática.
+- Esta actividad implicará la entrega de un producto que deberá cargar a la plataforma.
+## Instrucciones:
 
-## Laravel Sponsors
+​Diseñar un software gestión de stock. 
+-   Registrar un producto con los siguientes datos, id auto incrementable, código único del producto, nombre del producto, categoría, sucursal en la que se encuentra, y descripción, cantidad, y precio venta. 
+-   Asignar productos a sucursal. (Defina 3 sucursales.) 
+-   Consultar productos por código, nombre, y opcionalmente la sucursal. 
+-   Dar de baja un producto. (Con la opción de eliminar el producto). 
+-   Actualizar nombre, precio y descripción del producto. 
+-   Crear un login para administrador del sistema. 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Se solicita:
+- Diseñe un estilo visual o utilice una plantilla Bootstrap que se ajuste a los requerimientos. 
+- Valide los campos obligatorios de las vistas y envíelos a una clase PHP la cual mostrará los datos por pantalla. 
+### Formato de entrega
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Adjunte en la plataforma virtual el proyecto e informe en una sola carpeta. 
+- Portada: título del trabajo, datos identificación (asignatura, logo de CIISA, nombre del profesor y de los alumnos).
+- Desarrollo de los ítemes temáticos o instrucciones de la tarea. 
+- Archivo formato Word o PDF para evitar desconfiguración de tablas, imágenes o mapas.  
+- Número de páginas:  Máximo 5. 
+- Tipo de letra: Arial, tamaño 12.   
+- Interlineado: 1,5 líneas  
+- Alineación: justificada.   
+- Páginas numeradas.   
+- El nombre a dar al archivo es el siguiente EV_Unidad1_Nombre_Apellido.zip 
