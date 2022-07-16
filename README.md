@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 
 
-# <center>FRAMEWORK Y PROGRAMACIÓN WEB
+# <center>FRAMEWORK Y PROGRAMACIÓN WEB</center>
 #
 ### **Grupo N° 3 - SECCIÓN 51**
 **Integrantes:**
