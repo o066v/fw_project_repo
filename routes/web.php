@@ -31,3 +31,7 @@ Route::get('/registro', function (){
 Route::get('/dashboard', function (){
     return view('/dashboard');
 });
+
+Route::get('/registroproducto', function (){
+    return view('/registroproductos');
+});
