@@ -7,7 +7,17 @@
 - Renato Matkovic
 - Rodolfo Sánchez
 - Alejandro Sáez
-#
+# Screenshoots 
+# <p align="center"><a href="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/index.jpg" target="_blank"><img src="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/index.jpg?raw=true" width="600"></a></p>
+# <p align="center"><a href="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/iniciar%20sesion.jpg" target="_blank"><img src="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/iniciar%20sesion.jpg?raw=true" width="600"></a></p>
+# <p align="center"><a href="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/registro.jpg" target="_blank"><img src="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/registro.jpg?raw=true" width="600"></a></p>
+# <p align="center"><a href="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/Dashboard.jpg" target="_blank"><img src="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/Dashboard.jpg?raw=true" width="600"></a></p>
+# <p align="center"><a href="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/registro%20desde%20imagen.jpg" target="_blank"><img src="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/registro%20desde%20imagen.jpg?raw=true" width="600"></a></p>
+# <p align="center"><a href="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/registro%20producto.jpg" target="_blank"><img src="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/registro%20producto.jpg?raw=true" width="600"></a></p>
+# <p align="center"><a href="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/registro%20sucursal.jpg" target="_blank"><img src="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/registro%20sucursal.jpg?raw=true" width="600"></a></p>
+
+# <p align="center"><a href="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/mostrar%20productos.jpg" target="_blank"><img src="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/mostrar%20productos.jpg?raw=true" width="600"></a></p>
+
 ## Evaluación de unidad 1 - UNI01
 
 Resultados de Aprendizaje: 
