@@ -7,6 +7,9 @@
 - Renato Matkovic
 - Rodolfo Sánchez
 - Alejandro Sáez
+
+**Video explicativo:**
+- https://youtu.be/3vmQvfBs4VQ
 # Screenshoots 
 # <p align="center"><a href="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/index.jpg" target="_blank"><img src="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/index.jpg?raw=true" width="600"></a></p>
 # <p align="center"><a href="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/iniciar%20sesion.jpg" target="_blank"><img src="https://github.com/o066v/fw_project_repo/blob/main/resources/views/images/iniciar%20sesion.jpg?raw=true" width="600"></a></p>
