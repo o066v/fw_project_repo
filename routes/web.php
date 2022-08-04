@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\StockController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,33 +13,76 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//GET
 
-Route::get('/index', function (){
-    return view('/index');
-});
+Route::get('/',[
+  'uses' => 'App\Http\Controllers\StockController@welcome',
+  'as' => 'welcome'
+]);
 
-Route::get('/login', function (){
-    return view('/login');
-});
-Route::get('/registro', function (){
-    return view('/registro');
-});
+Route::get('/index',[
+  'uses' => 'App\Http\Controllers\StockController@index',
+  'as' => 'index'
+]);
 
-Route::get('/dashboard', function (){
-    return view('/dashboard');
-});
+Route::get('/login',[
+  'uses' => 'App\Http\Controllers\StockController@login',
+  'as' => 'login'
+]);
 
-Route::get('/dashboard/mostrarproductos', function (){
-    return view('/dashboard.mostrarproductos');
-});
+Route::get('/registro',[
+  'uses' => 'App\Http\Controllers\StockController@registro',
+  'as' => 'registro'
+]);
 
-Route::get('/dashboard/registroproducto', function (){
-    return view('/dashboard.registroproductos');
-});
+Route::get('/inicio',[
+  'uses' => 'App\Http\Controllers\StockController@inicio',
+  'as' => 'inicio'
+]);
 
-Route::get('/dashboard/registrosucursal', function (){
-    return view('/dashboard.registrosucursal');
-});
+Route::get('/inicio/registroproducto',[
+  'uses' => 'App\Http\Controllers\StockController@registroproducto',
+  'as' => 'registroproducto'
+]);
+
+Route::get('/inicio/registrocategoriaproducto',[
+  'uses' => 'App\Http\Controllers\StockController@registrocategoriaproducto',
+  'as' => 'registrocategoriaproducto'
+]);
+
+Route::get('/inicio/registrosucursal',[
+  'uses' => 'App\Http\Controllers\StockController@registrosucursal',
+  'as' => 'registrosucursal'
+]);
+
+Route::get('/inicio/mostrarproductos',[
+  'uses' => 'App\Http\Controllers\StockController@mostrarproductos',
+  'as' => 'mostrarproductos'
+]);
+
+Route::get('/inicio/mostrarsucursales',[
+  'uses' => 'App\Http\Controllers\StockController@mostrarsucursales',
+  'as' => 'mostrarsucursales'
+]);
+
+Route::get('/inicio/buscar',[
+  'uses' => 'App\Http\Controllers\StockController@buscar',
+  'as' => 'buscar'
+]);
+
+//POST
+
+Route::post('/inicio/guardarproducto',[
+  'uses' => 'App\Http\Controllers\StockController@guardarproducto',
+  'as' => 'guardarproducto'
+]);
+
+Route::post('/inicio/guardarsucursal',[
+  'uses' => 'App\Http\Controllers\StockController@guardarsucursal',
+  'as' => 'guardarsucursal'
+]);
+
+Route::post('/inicio/guardarcategoriaproducto',[
+  'uses' => 'App\Http\Controllers\StockController@guardarcategoriaproducto',
+  'as' => 'guardarcategoriaproducto'
+]);

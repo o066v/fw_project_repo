@@ -26,7 +26,7 @@
                       <input type="checkbox" value="remember-me"> Recuerdame
                     </label>
                   </div>
-                  <a href="/dashboard" class="w-50 btn btn-lg btn-primary type="button">Ingresar</a>
+                  <a href="{{ route('inicio')}}" class="w-50 btn btn-lg btn-primary type="button">Ingresar</a>
                 </form>
           </div>
         </div>

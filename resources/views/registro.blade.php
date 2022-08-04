@@ -24,7 +24,7 @@
                     <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                     <label for="floatingPassword">Repetir Contraseña</label>
                   </div>
-                <a href="/login" class="w-50 btn btn-lg btn-primary" type="submit">Registrar</a>
+                <a href="{{ route('login')}}" class="w-50 btn btn-lg btn-primary" type="submit">Registrar</a>
               </form>
           </div>
         </div>

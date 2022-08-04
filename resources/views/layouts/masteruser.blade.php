@@ -7,7 +7,7 @@
     <title>Dashboard - Gestión de Stock</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
-    <link href="dashboard.css" rel="stylesheet">
+    <link href="inicio.css" rel="stylesheet">
 
   </head>
   <body>
@@ -18,27 +18,25 @@
   <header class="p-3 mb-3 border-bottom">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/dashboard" class="d-flex align-items-left col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <a href="/inicio" class="d-flex align-items-left col-md-2">
           <img class="mb-2" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="52" height="37">
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="/dashboard" class="nav-link px-2 link-secondary">Dashboard</a></li>
-          <li><a href="/dashboard/mostrarproductos" class="nav-link px-2 link-secondary">Mostrar productos</a></li>
-          <li><a href="/dashboard/registroproducto" class="nav-link px-2 link-dark">Registro de productos</a></li>
-          <li><a href="/dashboard/registrosucursal" class="nav-link px-2 link-dark">Registro de sucursales</a></li>
+          <li><a href="{{ route('inicio') }}" class="nav-link px-2 link-dark">Inicio</a></li>
+          <li><a href="{{ route('registroproducto') }}" class="nav-link px-2 link-dark">Registro de producto</a></li>
+          <li><a href="{{ route('registrocategoriaproducto') }}" class="nav-link px-2 link-dark">Registro de categoría producto</a></li>
+          <li><a href="{{ route('registrosucursal') }}" class="nav-link px-2 link-dark">Registro de sucursal</a></li>
+          <li><a href="{{ route('mostrarproductos') }}" class="nav-link px-2 link-dark">Mostrar productos</a></li>
+          <li><a href="{{ route('mostrarsucursales') }}" class="nav-link px-2 link-dark">Mostrar sucursales</a></li>
+          <li><a href="{{ route('buscar') }}" class="nav-link px-2 link-dark">Buscar</a></li>
         </ul>
-
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control" placeholder="Buscar productos o sucursales..." aria-label="Search">
-        </form>
 
         <div class="dropdown text-end">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
           </a>
           <ul class="dropdown-menu text-small">
-            <li><a class="dropdown-item" href="/dashboard/registroproducto">Nuevo producto...</a></li>
             <li><a class="dropdown-item" href="#">Configuraciones</a></li>
             <li><a class="dropdown-item" href="#">Perfil</a></li>
             <li><hr class="dropdown-divider"></li>
