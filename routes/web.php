@@ -64,12 +64,17 @@ Route::get('/',[
     'as' => 'mostrarsucursales'
   ]);
   
+  Route::get('/inicio/mostrarcategoriaproductos',[
+    'uses' => 'StockController@mostrarcategoriaproductos',
+    'as' => 'mostrarcategoriaproductos'
+  ]);
+
   Route::get('/inicio/buscar',[
     'uses' => 'StockController@buscar',
     'as' => 'buscar'
   ]);
   
-  //POST App\Http\Controllers
+  //POST 
   
   Route::post('/inicio/guardarproducto',[
     'uses' => 'StockController@guardarproducto',

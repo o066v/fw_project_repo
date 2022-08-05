@@ -18,7 +18,7 @@
   <header class="p-3 mb-3 border-bottom">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/inicio" class="d-flex align-items-left col-md-2">
+        <a href="{{ route('inicio') }}">
           <img class="mb-2" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="52" height="37">
         </a>
 
@@ -29,6 +29,7 @@
           <li><a href="{{ route('registrosucursal') }}" class="nav-link px-2 link-dark">Registro de sucursal</a></li>
           <li><a href="{{ route('mostrarproductos') }}" class="nav-link px-2 link-dark">Mostrar productos</a></li>
           <li><a href="{{ route('mostrarsucursales') }}" class="nav-link px-2 link-dark">Mostrar sucursales</a></li>
+          <li><a href="{{ route('mostrarcategoriaproductos') }}" class="nav-link px-2 link-dark">Mostrar categoria productos</a></li>
           <li><a href="{{ route('buscar') }}" class="nav-link px-2 link-dark">Buscar</a></li>
         </ul>
 

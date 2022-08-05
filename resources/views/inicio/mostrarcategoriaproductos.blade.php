@@ -8,18 +8,15 @@
         <div class="card">
           <div class="card-body">
               
-                  <h1 class="h3 mb-3 fw-normal text-center">Listado de productos</h1>
+                  <h1 class="h3 mb-3 fw-normal text-center">Listado de categorías</h1>
               
                   <div class="row">
                     
-                    @foreach($productos as $producto)
+                    @foreach($categorias as $categoria)
                     <div class="col-3">
                       <div class="card text-center">
-                        <h5>{{ $producto->nombre}}</h5>
-                        <p>Codigo Producto: {{ $producto->codigo}}</p>
-                        <p>Descripcion Producto: {{ $producto->descripcion}}</p>
-                        <p>Cantidad en Stock: {{ $producto->cantidad}}</p>
-                        <p>Precio Unidad: ${{ $producto->precio}} pesos</p>
+                        <h5>{{ $categoria->nombre}}</h5>
+                        <p>Codigo Categoría: {{ $categoria->codigo}}</p>
                       </div>
                      </div>
                     @endforeach

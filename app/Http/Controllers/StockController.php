@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Sucursal;
+use App\Models\Categoria;
+use App\Models\Producto;
 
 class StockController extends Controller
 {
@@ -27,11 +30,36 @@ class StockController extends Controller
     }
 
     public function mostrarproductos(){
-      return view('inicio/mostrarproductos');
+      $productos = Producto::get();
+
+      //dd($productos);
+
+      return view('inicio/mostrarproductos',[
+        'productos' => $productos
+      ]);
+      
     }
 
     public function mostrarsucursales(){
-      return view('inicio/mostrarsucursales');
+      $sucursales = Sucursal::get();
+
+      //dd($sucursales);
+
+      return view('inicio/mostrarsucursales',[
+        'sucursales' => $sucursales
+      ]);
+      
+    }
+
+    public function mostrarcategoriaproductos(){
+      $categorias = Categoria::get();
+
+      //dd($categorias);
+
+      return view('inicio/mostrarcategoriaproductos',[
+        'categorias' => $categorias
+      ]);
+      
     }
 
     public function registroproducto(){
@@ -61,9 +89,18 @@ class StockController extends Controller
         'cantidad' => 'required|integer',
         'precio' => 'required|integer'
       ]);
+      
+      $producto = new Producto();
+      $producto->codigo=$request->codigo;
+      $producto->nombre=$request->nombre;
+      $producto->categoria=$request->categoria;
+      $producto->sucursal=$request->sucursal;
+      $producto->descripcion=$request->descripcion;
+      $producto->cantidad=$request->cantidad;
+      $producto->precio=$request->precio;
 
       return "[OK] PRODUCTO INGRESADO AL SISTEMA.";
-        
+      
     }
 
     public function guardarsucursal(Request $request){
