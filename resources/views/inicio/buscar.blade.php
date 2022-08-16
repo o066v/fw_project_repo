@@ -27,7 +27,7 @@
             <label for="nombreproducto">Nombre producto</label>
           </div>
           <div class="text-center">
-            <button class="w-50 btn btn-lg btn-primary" type="submit"></button>
+            <button class="w-50 btn btn-lg btn-primary" type="submit">Buscar</button>
           </div>
 
         </form>

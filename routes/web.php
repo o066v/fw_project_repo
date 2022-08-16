@@ -53,6 +53,11 @@ Route::get('/',[
     'uses' => 'StockController@registrosucursal',
     'as' => 'registrosucursal'
   ]);
+
+  Route::get('/inicio/relacionproductosucursal',[
+    'uses' => 'StockController@relacionproductosucursal',
+    'as' => 'relacionproductosucursal'
+  ]);
   
   Route::get('/inicio/mostrarproductos',[
     'uses' => 'StockController@mostrarproductos',
@@ -91,3 +96,7 @@ Route::get('/',[
     'as' => 'guardarcategoriaproducto'
   ]);
 
+  Route::post('/inicio/guardarrelacionproductosucursal',[
+    'uses' => 'StockController@guardarrelacionproductosucursal',
+    'as' => 'guardarrelacionproductosucursal'
+  ]);

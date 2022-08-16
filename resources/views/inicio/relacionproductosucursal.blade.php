@@ -10,19 +10,23 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <form method="post" action="{{ route('guardarcategoriaproducto') }}">
-          <h1 class="h3 mb-3 fw-normal text-center">Añadir categoría producto</h1>
+        <form method="post" action="{{ route('guardarrelacionproductosucursal') }}">
+          <h1 class="h3 mb-3 fw-normal text-center">Relaciones Producto-Sucursal</h1>
 
           <div class="form-floating m-2">
-            <input type="text" class="form-control" id="codigo" name='codigo'>
-            <label for="codigosucursal">Código categoría producto</label>
+            <input type="text" class="form-control" id="producto" name='producto'>
+            <label for="producto">Producto</label>
           </div>
           <div class="form-floating m-2">
-            <input type="text" class="form-control" id="nombre" name='nombre'>
-            <label for="nombresucursal">Nombre categoría producto</label>
+            <input type="text" class="form-control" id="sucursal" name='sucursal'>
+            <label for="sucursal">Sucursal</label>
+          </div>
+          <div class="form-floating m-2">
+            <input type="text" class="form-control" id="cantidad" name='cantidad'>
+            <label for="cantidad">Cantidad (N° Unidades)</label>
           </div>
           <div class="text-center">
-            <button class="w-50 btn btn-lg btn-primary" type="submit">Registrar categoría producto</button>
+            <button class="w-50 btn btn-lg btn-primary" type="submit">Asociar Producto a Sucursal</button>
           </div>
 
           @if($errors->any())

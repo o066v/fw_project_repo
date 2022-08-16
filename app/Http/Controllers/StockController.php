@@ -74,6 +74,11 @@ class StockController extends Controller
       return view('inicio/registrosucursal');
     }
 
+    public function relacionproductosucursal(){
+      return view('inicio/relacionproductosucursal');
+    }
+
+
     public function buscar(){
       return view('inicio/buscar');
     }
@@ -84,9 +89,7 @@ class StockController extends Controller
         'codigo' => 'required|min:5',
         'nombre' => 'required|min:5',
         'categoria' => 'required|min:5',
-        'sucursal' => 'required',
         'descripcion' => 'required|min:5',
-        'cantidad' => 'required|integer',
         'precio' => 'required|integer'
       ]);
       
@@ -94,9 +97,7 @@ class StockController extends Controller
       $producto->codigo=$request->codigo;
       $producto->nombre=$request->nombre;
       $producto->categoria=$request->categoria;
-      $producto->sucursal=$request->sucursal;
       $producto->descripcion=$request->descripcion;
-      $producto->cantidad=$request->cantidad;
       $producto->precio=$request->precio;
 
       return "[OK] PRODUCTO INGRESADO AL SISTEMA.";
@@ -127,5 +128,20 @@ class StockController extends Controller
       return "[OK] CATEGORÍA INGRESADA AL SISTEMA.";
       
     }
+
+    public function guardarrelacionproductosucursal(Request $request){
+      //dd($request);
+
+      $this ->validate($request,[
+        'producto' => 'required|min:5',
+        'sucursal' => 'required|min:5',
+        'cantidad' => 'required|min:5'
+      ]);
+
+      return "[OK] RELACION PRODUCTO - SUCURSAL.";
+      
+    }
+
+
 
 }

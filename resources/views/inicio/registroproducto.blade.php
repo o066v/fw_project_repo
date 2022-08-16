@@ -27,16 +27,8 @@
             <label for="categoriaproducto">Categoría</label>
           </div>
           <div class="form-floating m-2">
-            <input type="text" class="form-control" id="sucursal" name="sucursal">
-            <label for="nombresucursalproducto">Sucursal</label>
-          </div>
-          <div class="form-floating m-2">
             <input type="text" class="form-control" id="descripcion" name="descripcion">
             <label for="descripcionproducto">Descripción</label>
-          </div>
-          <div class="form-floating m-2">
-            <input type="number" class="form-control" id="cantidad" name="cantidad">
-            <label for="cantidadproducto">Cantidad</label>
           </div>
           <div class="form-floating m-2">
             <input type="number" class="form-control" id="precio" name="precio">
