@@ -17,7 +17,6 @@ class CreateCategoriasTable extends Migration
             $table->id();
             $table->string('codigo',5);
             $table->string('nombre',100);
-            $table->foreignId('producto_id')->constrained();
             $table->timestamps();
         });
     }

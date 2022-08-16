@@ -18,16 +18,14 @@ class InsertarSucursales extends Seeder
                 'nombre' => 'sucursal valdivia',
                 'ciudad' => 'valdivia',
                 'telefono' => '925874169',
-                'encargado' => 'Alejandro',
-                'producto_id' => 3
+                'encargado' => 'Alejandro'
             ],
             [
                 'codigo' => 'san01',
                 'nombre' => 'sucursal santiago',
                 'ciudad' => 'santiago',
                 'telefono' => '987459325',
-                'encargado' => 'Renato',
-                'producto_id' => 4
+                'encargado' => 'Renato'
             ]
         ));
     }

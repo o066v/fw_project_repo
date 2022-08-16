@@ -17,15 +17,15 @@ class InsertarProductos extends Seeder
                 'codigo' => 'celr1',
                 'nombre' => 'celular rojo',
                 'descripcion' => 'es un celular de color rojo',
-                'cantidad' => '30',
-                'precio' => '65000'
+                'precio' => '65000',
+                'categoria_id' => ''
             ],
             [
                 'codigo' => 'sil01',
                 'nombre' => 'silla comoda',
                 'descripcion' => 'es una silla muy comoda',
-                'cantidad' => '10',
-                'precio' => '25000'
+                'precio' => '25000',
+                'categoria_id' => ''
             ]
         ));
 

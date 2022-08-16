@@ -16,12 +16,10 @@ class InsertarCategorias extends Seeder
             [
                 'codigo' => 'tecno',
                 'nombre' => 'tecno',
-                'producto_id' => 3
             ],
             [
                 'codigo' => 'hogar',
                 'nombre' => 'hogar',
-                'producto_id' => 4
             ]
         ));
     }
