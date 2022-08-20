@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Sucursal;
 use App\Models\Categoria;
 use App\Models\Producto;
+use App\Models\RelacionProductoSucursal;
 
 class StockController extends Controller
 {
@@ -62,8 +63,27 @@ class StockController extends Controller
       
     }
 
+    public function mostrarproductossucursales(){
+     
+      $productos_sucursales = RelacionProductoSucursal::get();
+
+      //dd($categorias);
+
+      return view('inicio/mostrarproductossucursales',[
+        'productos_sucursales' => $productos_sucursales
+      ]);
+      
+    }
+
     public function registroproducto(){
-      return view('inicio/registroproducto');
+      $categorias = Categoria::get();
+
+      //dd($categorias);
+
+      return view('inicio/registroproducto',[
+        'categorias' => $categorias
+      ]);
+
     }
 
     public function registrocategoriaproducto(){
@@ -75,7 +95,17 @@ class StockController extends Controller
     }
 
     public function relacionproductosucursal(){
-      return view('inicio/relacionproductosucursal');
+
+      $productos = Producto::get();
+      $sucursales = Sucursal::get();
+
+      //dd($categorias);
+
+      return view('inicio/relacionproductosucursal',[
+        'productos' => $productos,
+        'sucursales' => $sucursales
+      ]);
+
     }
 
 
@@ -84,11 +114,13 @@ class StockController extends Controller
     }
 
     public function guardarproducto(Request $request){
+
+
       //dd($request);
       $this ->validate($request,[
         'codigo' => 'required|min:5',
         'nombre' => 'required|min:5',
-        'categoria' => 'required|min:5',
+        'categoria' => 'required',
         'descripcion' => 'required|min:5',
         'precio' => 'required|integer'
       ]);
@@ -96,11 +128,17 @@ class StockController extends Controller
       $producto = new Producto();
       $producto->codigo=$request->codigo;
       $producto->nombre=$request->nombre;
-      $producto->categoria=$request->categoria;
+      $producto->categoria_id=$request->categoria;
       $producto->descripcion=$request->descripcion;
       $producto->precio=$request->precio;
 
-      return "[OK] PRODUCTO INGRESADO AL SISTEMA.";
+      $producto -> save();
+      
+
+      $productos = Producto::get();
+      return view('inicio/mostrarproductos',[
+        'productos' => $productos
+      ]);
       
     }
 
@@ -114,7 +152,18 @@ class StockController extends Controller
         'encargado' => 'required|min:5',
       ]);
 
-      return "[OK] SUCURSAL INGRESADA AL SISTEMA.";
+      $sucursal = new Sucursal();
+      $sucursal ->  codigo = $request->codigo;
+      $sucursal ->  nombre =  $request->nombre;
+      $sucursal ->  ciudad =  $request->ciudad;
+      $sucursal ->  telefono =  $request->telefono;
+      $sucursal ->  encargado =  $request->encargado;
+      $sucursal -> save();
+
+      $sucursales = Sucursal::get();
+      return view('inicio/mostrarsucursales',[
+        'sucursales' => $sucursales
+      ]);
       
     }
 
@@ -125,7 +174,17 @@ class StockController extends Controller
         'nombre' => 'required|min:5',
       ]);
 
-      return "[OK] CATEGORÍA INGRESADA AL SISTEMA.";
+
+      $categoria = new Categoria();
+      $categoria ->  codigo = $request->codigo;
+      $categoria ->  nombre =  $request->nombre;
+      $categoria -> save();
+      
+
+      $categorias = Categoria::get();
+      return view('inicio/mostrarcategoriaproductos',[
+        'categorias' => $categorias
+      ]);
       
     }
 
@@ -133,11 +192,17 @@ class StockController extends Controller
       //dd($request);
 
       $this ->validate($request,[
-        'producto' => 'required|min:5',
-        'sucursal' => 'required|min:5',
-        'cantidad' => 'required|min:5'
+        'producto' => 'required',
+        'sucursal' => 'required',
+        'cantidad' => 'required|min:1'
       ]);
 
+      $productosucursal = new RelacionProductoSucursal();
+      $productosucursal  ->  producto_id = $request->producto;
+      $productosucursal  ->  sucursal_id =  $request->sucursal;
+      $productosucursal  ->  cantidad =  $request->cantidad;
+      $productosucursal  -> save();
+      
       return "[OK] RELACION PRODUCTO - SUCURSAL.";
       
     }

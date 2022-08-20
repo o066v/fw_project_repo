@@ -22,14 +22,24 @@
             <input type="text" class="form-control" id="nombre" name="nombre">
             <label for="nombreproducto">Nombre producto</label>
           </div>
+
           <div class="form-floating m-2">
-            <input type="text" class="form-control" id="categoria" name="categoria">
-            <label for="categoriaproducto">Categoría</label>
+
+            <select class="selectpicker" id="categoria" name="categoria">
+              @foreach($categorias as $categoria)
+              <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
+              @endforeach
+            </select>
+
           </div>
+
+
+
           <div class="form-floating m-2">
             <input type="text" class="form-control" id="descripcion" name="descripcion">
             <label for="descripcionproducto">Descripción</label>
           </div>
+
           <div class="form-floating m-2">
             <input type="number" class="form-control" id="precio" name="precio">
             <label for="precioventaproducto">Precio venta</label>

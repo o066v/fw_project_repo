@@ -14,12 +14,22 @@
           <h1 class="h3 mb-3 fw-normal text-center">Relaciones Producto-Sucursal</h1>
 
           <div class="form-floating m-2">
-            <input type="text" class="form-control" id="producto" name='producto'>
-            <label for="producto">Producto</label>
+
+            <select class="selectpicker" id="producto" name="producto">
+              @foreach($productos as $producto)
+              <option value="{{$producto->id}}">{{$producto->nombre}}</option>
+              @endforeach
+            </select>
+
           </div>
           <div class="form-floating m-2">
-            <input type="text" class="form-control" id="sucursal" name='sucursal'>
-            <label for="sucursal">Sucursal</label>
+
+            <select class="selectpicker" id="sucursal" name="sucursal">
+              @foreach($sucursales as $sucursal)
+              <option value="{{$sucursal->id}}">{{$sucursal->nombre}}</option>
+              @endforeach
+            </select>
+
           </div>
           <div class="form-floating m-2">
             <input type="text" class="form-control" id="cantidad" name='cantidad'>

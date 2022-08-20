@@ -74,6 +74,11 @@ Route::get('/',[
     'as' => 'mostrarcategoriaproductos'
   ]);
 
+  Route::get('/inicio/mostrarproductossucursales',[
+    'uses' => 'StockController@mostrarproductossucursales',
+    'as' => 'mostrarproductossucursales'
+  ]);
+
   Route::get('/inicio/buscar',[
     'uses' => 'StockController@buscar',
     'as' => 'buscar'

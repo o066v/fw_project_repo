@@ -57,6 +57,7 @@
                 <a class="dropdown-item" href="{{ route('mostrarsucursales') }}">Mostrar
                   sucursales</a>
                 <a class="dropdown-item" href="{{ route('mostrarcategoriaproductos') }}">Mostrar categoria productos</a>
+                <a class="dropdown-item" href="{{ route('mostrarproductossucursales') }}">Mostrar productos en sucursales</a>
                 <a class="dropdown-item" href="{{ route('buscar') }}">Buscar</a>
                 </button>
               </div>

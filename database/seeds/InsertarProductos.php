@@ -15,17 +15,17 @@ class InsertarProductos extends Seeder
         DB::table('productos')->insert(array(
             [
                 'codigo' => 'celr1',
-                'nombre' => 'celular rojo',
+                'nombre' => 'celular motorola rojo',
                 'descripcion' => 'es un celular de color rojo',
                 'precio' => '65000',
-                'categoria_id' => ''
+                'categoria_id' => '1'
             ],
             [
                 'codigo' => 'sil01',
                 'nombre' => 'silla comoda',
                 'descripcion' => 'es una silla muy comoda',
                 'precio' => '25000',
-                'categoria_id' => ''
+                'categoria_id' => '2'
             ]
         ));
 

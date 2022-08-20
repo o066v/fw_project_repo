@@ -18,7 +18,7 @@
               <h5>{{ $producto->nombre}}</h5>
               <p>Codigo Producto: {{ $producto->codigo}}</p>
               <p>Descripcion Producto: {{ $producto->descripcion}}</p>
-              <p>Cantidad en Stock: {{ $producto->cantidad}}</p>
+              <p>Categoria Producto: {{ $producto->categoria_id}}</p>
               <p>Precio Unidad: ${{ $producto->precio}} pesos</p>
             </div>
           </div>

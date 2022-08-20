@@ -13,9 +13,9 @@ class InsertarRelacionProductoSucursal extends Seeder
     {
         DB::table('productos_sucursales')->insert(array(
             [
-                'producto_id' => '',
-                'sucursal_id' => '',
-                'cantidad' => ''
+                'producto_id' => '1',
+                'sucursal_id' => '2',
+                'cantidad' => '50'
             ]
         ));
     }
