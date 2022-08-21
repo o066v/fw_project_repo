@@ -63,7 +63,6 @@
               </div>
             </div>
 
-
             <li><a class="nav-link px-2 link-dark" href="#">Configuraciones</a></li>
             <li><a class="nav-link px-2 link-dark" href="#">Perfil</a></li>
             <li><a class="nav-link px-2 link-dark" href="/index">Desconectarse</a></li>

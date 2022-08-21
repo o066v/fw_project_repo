@@ -31,13 +31,11 @@ class StockController extends Controller
     }
 
     public function mostrarproductos(){
-      $productos = Producto::get();
+      {
+        $productos = Producto::with('categoria')->get();
 
-      //dd($productos);
-
-      return view('inicio/mostrarproductos',[
-        'productos' => $productos
-      ]);
+        return view('inicio/mostrarproductos' , compact('productos'));
+    }
       
     }
 
@@ -63,17 +61,15 @@ class StockController extends Controller
       
     }
 
-    public function mostrarproductossucursales(){
-     
-      $productos_sucursales = RelacionProductoSucursal::get();
 
-      //dd($categorias);
 
-      return view('inicio/mostrarproductossucursales',[
-        'productos_sucursales' => $productos_sucursales
-      ]);
-      
+    public function mostrarproductossucursales()
+    {
+        $productos_sucursales = RelacionProductoSucursal::with('producto','sucursal')->get();
+
+        return view('inicio/mostrarproductossucursales' , compact('productos_sucursales'));
     }
+
 
     public function registroproducto(){
       $categorias = Categoria::get();
@@ -108,10 +104,24 @@ class StockController extends Controller
 
     }
 
+    public function buscar($buscar=null){
+      if($buscar=null){
+        $buscar = \Request::get('buscar');
+      }
 
-    public function buscar(){
-      return view('inicio/buscar');
+      $productos=Producto::where('codigo','LIKE','%'.$buscar.'%')->get();
+
+      return view('inicio.mostrarproductos')->with(
+        array(
+          'productos' => $productos,
+          'buscar' => $buscar
+        )
+      );
+
     }
+    
+
+
 
     public function guardarproducto(Request $request){
 
@@ -203,9 +213,16 @@ class StockController extends Controller
       $productosucursal  ->  cantidad =  $request->cantidad;
       $productosucursal  -> save();
       
-      return "[OK] RELACION PRODUCTO - SUCURSAL.";
+      $productos_sucursales = RelacionProductoSucursal::get();
+      return view('inicio/mostrarproductossucursales',[
+        'productos_sucursales' => $productos_sucursales
+      ]);
       
     }
+
+
+
+
 
 
 

@@ -11,15 +11,16 @@
         <h1 class="h3 mb-3 fw-normal text-center">Listado Stock de Productos por Sucursal</h1>
 
         <div class="row">
-
           @foreach($productos_sucursales as $productosucursal)
-          <div class="col-3">
-            <div class="card text-center">
-              <p value="$productosucursal->productos->id">{{$productosucursal->id}}</p>
-              <p value="$productosucursal->sucursales->id">{{$productosucursal->id}}</p>
+
+              <div class="col-3">
+              <div class="card text-center">
+              <p>Nombre Producto: {{$productosucursal->producto->nombre}}</p>
+              <p>Nombre Sucursal: {{$productosucursal->sucursal->nombre}}</p>
               <p>Cantidad en Stock: {{$productosucursal->cantidad}}</p>
-            </div>
-          </div>
+              </div>
+              </div>
+              
           @endforeach
 
         </div>
