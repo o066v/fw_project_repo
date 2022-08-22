@@ -10,7 +10,7 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <form method="post" action="{{ route('guardarproducto') }}">
+        <form method="post" action="{{ route('guardarproducto') }}" enctype="multipart/form-data">
 
           <h1 class="h3 mb-3 fw-normal text-center">Añadir nuevo producto</h1>
 
@@ -22,9 +22,9 @@
             <input type="text" class="form-control" id="nombre" name="nombre">
             <label for="nombreproducto">Nombre producto</label>
           </div>
-
+          <label for="categoriaproducto">Seleccione Categoria</label>
           <div class="form-floating m-2">
-
+          
             <select class="selectpicker" id="categoria" name="categoria">
               @foreach($categorias as $categoria)
               <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
@@ -39,10 +39,13 @@
             <input type="text" class="form-control" id="descripcion" name="descripcion">
             <label for="descripcionproducto">Descripción</label>
           </div>
-
+          <div class="mb-3">
+            <label for="image" class="form-label">Inserte Imagen</label>
+            <input type="file" class="form-control" id="image" name="image" accept=".jpg, .png, .jpeg">
+        </div>
           <div class="form-floating m-2">
             <input type="number" class="form-control" id="precio" name="precio">
-            <label for="precioventaproducto">Precio venta</label>
+            <label for="precioventaproducto">Precio Venta Unidad</label>
           </div>
           <div class="text-center">
             <button class="w-50 btn btn-lg btn-primary" type="submit">Registrar producto</button>

@@ -12,7 +12,7 @@
 
         <div class="row">
           @foreach($productos_sucursales as $productosucursal)
-
+            
               <div class="col-3">
               <div class="card text-center">
               <p>Nombre Producto: {{$productosucursal->producto->nombre}}</p>

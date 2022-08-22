@@ -83,7 +83,12 @@ Route::get('/',[
     'uses' => 'StockController@buscar',
     'as' => 'buscar'
   ]);
-  
+
+  Route::get('miniatura/{filename}',[
+  'uses' => 'StockController@getImagen',
+  'as' => 'getImagen'
+  ]);
+
   //POST 
   
   Route::post('/inicio/guardarproducto',[

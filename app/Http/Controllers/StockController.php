@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Models\Sucursal;
 use App\Models\Categoria;
 use App\Models\Producto;
@@ -68,6 +69,9 @@ class StockController extends Controller
         $productos_sucursales = RelacionProductoSucursal::with('producto','sucursal')->get();
 
         return view('inicio/mostrarproductossucursales' , compact('productos_sucursales'));
+
+        $imagen = $request->file('image');
+
     }
 
 
@@ -131,14 +135,23 @@ class StockController extends Controller
         'codigo' => 'required|min:5',
         'nombre' => 'required|min:5',
         'categoria' => 'required',
+        'image' => 'required',
         'descripcion' => 'required|min:5',
         'precio' => 'required|integer'
       ]);
+
+      $imagen = $request->file('image');
+
+      if($imagen){
+        $imagen_path = time()."-".$imagen->getClientOriginalName();
+        \Storage::disk('imagenes')->put($imagen_path, \File::get($imagen));
+      }
       
       $producto = new Producto();
       $producto->codigo=$request->codigo;
       $producto->nombre=$request->nombre;
       $producto->categoria_id=$request->categoria;
+      $producto->image=$imagen_path;
       $producto->descripcion=$request->descripcion;
       $producto->precio=$request->precio;
 
@@ -150,6 +163,11 @@ class StockController extends Controller
         'productos' => $productos
       ]);
       
+    }
+
+    public function getImagen($filename){
+      $file = \Storage::disk('imagenes')->get($filename);
+      return new Response($file, 200);
     }
 
     public function guardarsucursal(Request $request){
