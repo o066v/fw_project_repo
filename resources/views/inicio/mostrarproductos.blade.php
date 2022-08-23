@@ -25,8 +25,8 @@
               <p>Descripcion Producto: {{ $producto->descripcion}}</p>
               <p>Categoria Producto: {{ $producto->categoria->nombre}}</p>
               <p>Precio Unidad: ${{ $producto->precio}} pesos</p>
-              <p>{{ $producto->created_at}}</p>
-              <p>{{ $producto->updated_at}}</p>
+              <p>{{ \FormatTime::LongTimeFilterCreated($producto->created_at)}}</p>
+              <p>{{ \FormatTime::LongTimeFilter($producto->updated_at)}}</p>
             </div>
           </div>
           @endforeach
